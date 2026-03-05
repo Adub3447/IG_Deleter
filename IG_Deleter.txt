@@ -4,7 +4,7 @@
   const DELAY = 30000;
 
   for (let i = 1; i <= RUNS; i++) {
-    console.log(`🔄 Run ${i} of ${RUNS}...`);
+    console.log(` Run ${i} of ${RUNS}...`);
 
     // Click Select
     const selectBtn = [...document.querySelectorAll('span')]
@@ -42,13 +42,13 @@
     if (!confirmBtn) { console.log('%cConfirm button not found, stopping.', 'color: orange'); break; }
     confirmBtn.click();
 
-    console.log(`%c✅ Run ${i} done — deleted 10 comments. Total: ${i * 10}`, 'color: #3bff8a; font-weight: bold');
+    console.log(`%c Run ${i} done — deleted 10 comments. Total: ${i * 10}`, 'color: #3bff8a; font-weight: bold');
 
     if (i < RUNS) {
-      console.log(`⏳ Waiting 30 seconds...`);
+      console.log(` Waiting 30 seconds...`);
       await sleep(DELAY);
     }
   }
 
-  console.log('%c🏁 All 10 runs complete! Deleted up to 100 comments total.', 'color: #3bff8a; font-weight: bold; font-size: 14px;');
+  console.log('%c All 10 runs complete! Deleted up to 100 comments total.', 'color: #3bff8a; font-weight: bold; font-size: 14px;');
 })();
